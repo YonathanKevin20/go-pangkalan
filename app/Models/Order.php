@@ -13,8 +13,13 @@ class Order extends Model
 
     protected $guarded = ['id'];
 
-    public function user()
+    public function client()
     {
-    	return return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\User','client_id');
+    }
+
+    public function driver()
+    {
+    	return $this->belongsTo('App\User','driver_id');
     }
 }
