@@ -18,9 +18,9 @@ class CreateOrdersTable extends Migration
             $table->unsignedInteger('client_id')->nullable();
             $table->unsignedInteger('driver_id')->nullable();
             $table->decimal('lat_from', 12, 8)->nullable();
-            $table->decimal('long_from', 12, 8)->nullable();
+            $table->decimal('lng_from', 12, 8)->nullable();
             $table->decimal('lat_to', 12, 8)->nullable();
-            $table->decimal('long_to', 12, 8)->nullable();
+            $table->decimal('lng_to', 12, 8)->nullable();
             $table->enum('status', ['s','c','o','p'])->nullable();
             $table->timestamps();
             $table->softDeletes();
